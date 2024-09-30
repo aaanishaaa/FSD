@@ -1,0 +1,12 @@
+.head{
+    color:blueviolet;
+}
+body{
+    background-color: rgb(230, 230, 255);
+}
+.conatainer{
+
+}
+div+p{
+    background-color:cadetblue;
+}
