@@ -1,31 +1,15 @@
 .parent{
     background-color: red;
     height: 500px;
-    width: 100%;
-    display: flex;
+    width: 60%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
-.child1{
+.child1, .child2, .child3,.child4, .child5, .child6, .child7,.child8, .child9{
     background-color: aqua;
     border: 2px solid;
     height: 100px;
+    margin: 5px;
     width: 100px;
-    display:flex;
-    margin-right: 5px;
-}
-
-.child2{
-        background-color:blue;
-        border: 2px solid;
-        height: 100px;
-        width: 100px;
-        margin-right: 5px;
-        display: flex;
-    }
-.child3{
-    background-color: blueviolet;
-    border: 2px solid;
-    height: 100px;
-    width: 100px;
-    margin-right: 5px;
-    display: flex;
 }

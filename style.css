@@ -13,3 +13,18 @@ iframe img{
     height: 100%;
     object-fit: fill;
 }
+
+nav{
+    background-color: #cffff5;
+    display: flex;
+    justify-content: right;
+    padding: 15px;
+}
+
+a{
+    margin: 15px;
+    padding: 5px;
+}
+a.hover{
+    background-color: blue;
+}
