@@ -1,0 +1,145 @@
+body {
+  margin: 0px;
+  background-color: #61ada1;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.searchcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -20px;
+}
+
+.searchbar {
+  width: 700px;
+  padding: 10px;
+  border-radius: 2px;
+  font-size: 16px;
+  outline: none;
+}
+
+.searchbar:focus {
+    border: 10px;
+    border-color: #ffee00; 
+}
+
+.searchbutton {
+  background-color: #c2b500;
+  color: white;
+  border: none;
+  padding: 14px ;
+  border-radius: 0px 4px 4px 0px;
+  cursor: pointer;
+}
+
+.searchbutton:hover {
+  background-color: #0056b3; 
+  border-color: #ffee02;
+}
+
+.container {
+  display: grid;
+  background-color: rgb(209, 209, 209);
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  height: 300px;
+}
+
+ul li {
+  list-style: none;
+  display: inline;
+  padding: 10px;
+  float: right;
+}
+.row1 {
+  background-color: rgb(0, 0, 0);
+  grid-row: 1/2;
+  grid-column: 1/13;
+  color: white;
+  height: 100px;
+  z-index: 1;
+}
+
+.row2 {
+  background-color: rgb(37, 37, 37);
+  grid-row: 2/3;
+  grid-column: 1/13;
+  color: white;
+  z-index: 1;
+  height: 70px;
+}
+.row3 {
+  background-color: rgb(73, 171, 134);
+  grid-row: 3/4;
+  grid-column: 1/13;
+  color: white;
+  height: 300px;
+}
+.row3 > img {
+    margin-top: 170px;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+}
+.row4 {
+  height: 450px;
+  grid-row: 4/5;
+  grid-column: 1/13;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 1;
+}
+
+.row41,
+.row42,
+.row43,
+.row44 {
+  background-color: azure;
+  height: 370px;
+  width: 20%;
+  padding: 15px;
+  box-shadow: 2px 2px 2px 2px gray;
+}
+
+.row411 {
+  padding: 2px;
+  margin: 2px;
+}
+
+.row412 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.item1,
+.item2,
+.item3,
+.item4 {
+  padding: 15px;
+}
+.item1 > img {
+  width: 100%;
+}
+.item2 > img {
+  width: 100%;
+}
+.item3 > img {
+  width: 100%;
+}
+.item4 > img {
+  width: 100%;
+}
+table td{
+    padding: 20px;
+    padding-bottom: 10px;
+
+}
+.row42 img{
+    width:280px;
+    height: 220px;
+
+}
