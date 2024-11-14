@@ -1,0 +1,11 @@
+.icard{
+    background-color: rgb(255, 255, 255);
+    height: 300px;
+    border: 5px solid rgb(132, 146, 255);
+    width: 250px;
+    padding: 20px;
+}
+.college{
+    padding: 10px;
+    padding-top: 30px;
+}
