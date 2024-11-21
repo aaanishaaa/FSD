@@ -1,10 +1,14 @@
 import React from 'react'
+import UseStateState from './assets/UseStateState'
+import ImageManulaption from './assets/ImageManulaption'
 
-function App() {
+const App = () => {
   return (
-    <div>App</div>
+    <div>
+      {/* <UseStateState/> */}
+      <ImageManulaption/>
+    </div>
   )
 }
 
 export default App
-
