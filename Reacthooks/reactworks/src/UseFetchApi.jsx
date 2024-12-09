@@ -35,5 +35,4 @@ function UseFetchApi() {
     </div>
   );
 }
-
 export default UseFetchApi;
