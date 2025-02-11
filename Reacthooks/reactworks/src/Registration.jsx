@@ -1,45 +1,52 @@
 import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.css";
 
-function Registration() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+function Registration({regData}) {
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const [userdata,setuserdata]=useState();
 
-  const showData = (e) => {
+
+  function showData(e){
     e.preventDefault();
-    alert(`Name: ${name}\nEmail: ${email}\nPassword: ${password}`);
-  };
+    const data={
+      name,
+      email,
+      password
+    };
+    regData(data);
+  }
 
   return (
-    <div style={{ maxWidth: "400px", marginTop: "40px",margin:"auto", padding: "20px", border: "1px solid #ddd", borderRadius: "8px" }}>
-        <h1>Register</h1>
-      <form style={{ padding: "20px" }}>
-        <div className="form-group" style={{ marginBottom: "15px" }}>
-          <label htmlFor="exampleInputName1">Enter Name</label>
+    <div>
+      {/* <div>{JSON.stringify(userdata)}</div> */}
+      <form style={{ padding: "50px" }}>
+        <h1>REGISTER</h1>
+        <div className="form-group">
+          <label htmlFor="exampleInputEmail1">Enter Name</label>
           <input
-            type="text"
+            type="name"
             onChange={(e) => setName(e.target.value)}
             className="form-control"
             id="exampleInputName1"
+            aria-describedby="nameHelp"
             placeholder="Enter name"
-            style={{ width: "100%", padding: "10px", marginTop: "5px" }}
           />
-        </div>
-        <div className="form-group" style={{ marginBottom: "15px" }}>
           <label htmlFor="exampleInputEmail1">Email address</label>
           <input
             type="email"
             onChange={(e) => setEmail(e.target.value)}
             className="form-control"
             id="exampleInputEmail1"
+            aria-describedby="emailHelp"
             placeholder="Enter email"
-            style={{ width: "100%", padding: "10px", marginTop: "5px" }}
           />
-          <small id="emailHelp" className="form-text text-muted" style={{ fontSize: "12px", marginTop: "5px" }}>
+          <small id="emailHelp" className="form-text text-muted">
             We'll never share your email with anyone else.
           </small>
         </div>
-        <div className="form-group" style={{ marginBottom: "15px" }}>
+        <div className="form-group">
           <label htmlFor="exampleInputPassword1">Password</label>
           <input
             type="password"
@@ -47,14 +54,13 @@ function Registration() {
             className="form-control"
             id="exampleInputPassword1"
             placeholder="Password"
-            style={{ width: "100%", padding: "10px", marginTop: "5px" }}
           />
         </div>
         <button
           type="submit"
           onClick={showData}
           className="btn btn-primary"
-          style={{ marginTop: "10px", padding: "10px 20px" }}
+          style={{ margin: "5px" }}
         >
           Submit
         </button>

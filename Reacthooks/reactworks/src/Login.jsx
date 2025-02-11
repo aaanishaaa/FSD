@@ -1,18 +1,25 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
-function Login() {
+function Login({regdata}) {
+  const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const [name, setName] = useState();
-  function showData() {
-    alert(`Name: ${name}\nEmail: ${email}\nPassword: ${password}`);
-    
+  function verification() {
+    alert(name);
+    alert(email);
+    if(email==regdata.email){
+      alert("Correct")
+    }
+    else{
+      alert("User is invalid")
+    }
   }
 
   return (
     <div>
       <form style={{ padding: "50px" }}>
+      <h1>Login</h1>
         <div className="form-group">
           <label htmlFor="exampleInputEmail1">Enter Name</label>
           <input
@@ -48,11 +55,11 @@ function Login() {
         </div>
         <button
           type="submit"
-          onClick={showData}
+          onClick={verification}
           className="btn btn-primary"
           style={{ margin: "5px" }}
         >
-          Submit
+          Login
         </button>
       </form>
     </div>
