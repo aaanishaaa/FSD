@@ -1,5 +1,5 @@
+const { promises } = require('node:dns');
 const fs=require('node:fs/promises');
-// const fs=require('fs').promises;
 const fspromise=fs.writeFile("data.txt","Helllo")
 console.log(fspromise)
 fspromise.then((data)=>{    
@@ -9,3 +9,9 @@ fspromise.then((data)=>{
 }).finally(()=>{
     console.log("finally")
 })
+// ASYNC AWAIT
+async function readfileAsync(){
+    const data=await fs.readFile('data.txt','utf-8');
+    console.log(data);
+}
+readfileAsync();
